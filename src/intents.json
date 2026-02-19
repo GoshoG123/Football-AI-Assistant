@@ -1,0 +1,34 @@
+{
+  "intents": [
+    {
+      "tag": "help",
+      "patterns": ["помощ", "help"]
+    },
+    {
+      "tag": "exit",
+      "patterns": ["изход", "exit", "quit"]
+    },
+    {
+      "tag": "add_club",
+      "patterns": [
+        "добави клуб (.+)",
+        "add club (.+)"
+      ]
+    },
+    {
+      "tag": "list_clubs",
+      "patterns": [
+        "покажи всички",
+        "всички клубове",
+        "list clubs"
+      ]
+    },
+    {
+      "tag": "delete_club",
+      "patterns": [
+        "изтрий клуб (.+)",
+        "delete club (.+)"
+      ]
+    }
+  ]
+}

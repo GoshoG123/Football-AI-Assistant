@@ -5,13 +5,22 @@ from db import get_connection
 # CREATE
 # =========================
 def add_club(name, city, founded_year):
+    # ✅ Валидация за празно име
+    if not name or name.strip() == "":
+        return False
+
     try:
         conn = get_connection()
         cursor = conn.cursor()
 
+        # ✅ Проверка за duplicate
+        cursor.execute("SELECT id FROM clubs WHERE name = ?", (name,))
+        if cursor.fetchone():
+            return False  # клубът вече съществува
+
         cursor.execute(
             "INSERT INTO clubs (name, city, founded_year) VALUES (?, ?, ?)",
-            (name, city, founded_year)
+            (name.strip(), city, founded_year)
         )
 
         conn.commit()
@@ -29,44 +38,64 @@ def add_club(name, city, founded_year):
 # READ - ALL
 # =========================
 def get_all_clubs():
-    conn = get_connection()
-    cursor = conn.cursor()
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
 
-    cursor.execute("SELECT * FROM clubs")
-    clubs = cursor.fetchall()
+        cursor.execute("SELECT * FROM clubs")
+        clubs = cursor.fetchall()
 
-    conn.close()
-    return clubs
+        return clubs
+
+    except Exception as e:
+        print("Error fetching clubs:", e)
+        return []
+
+    finally:
+        conn.close()
 
 
 # =========================
 # READ - BY NAME
 # =========================
 def get_club_by_name(name):
-    conn = get_connection()
-    cursor = conn.cursor()
+    if not name or name.strip() == "":
+        return None
 
-    cursor.execute(
-        "SELECT * FROM clubs WHERE name = ?",
-        (name,)
-    )
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
 
-    club = cursor.fetchone()
-    conn.close()
-    return club
+        cursor.execute(
+            "SELECT * FROM clubs WHERE name = ?",
+            (name.strip(),)
+        )
+
+        club = cursor.fetchone()
+        return club
+
+    except Exception as e:
+        print("Error fetching club:", e)
+        return None
+
+    finally:
+        conn.close()
 
 
 # =========================
 # UPDATE
 # =========================
 def update_club(name, new_city, new_year):
+    if not name or name.strip() == "":
+        return False
+
     try:
         conn = get_connection()
         cursor = conn.cursor()
 
         cursor.execute(
             "UPDATE clubs SET city = ?, founded_year = ? WHERE name = ?",
-            (new_city, new_year, name)
+            (new_city, new_year, name.strip())
         )
 
         conn.commit()
@@ -88,13 +117,16 @@ def update_club(name, new_city, new_year):
 # DELETE
 # =========================
 def delete_club(name):
+    if not name or name.strip() == "":
+        return False
+
     try:
         conn = get_connection()
         cursor = conn.cursor()
 
         cursor.execute(
             "DELETE FROM clubs WHERE name = ?",
-            (name,)
+            (name.strip(),)
         )
 
         conn.commit()
