@@ -132,7 +132,7 @@ def delete_club(name):
         conn.commit()
 
         if cursor.rowcount == 0:
-            return False  # няма такъв клуб
+            return False 
 
         return True
 

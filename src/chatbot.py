@@ -13,8 +13,8 @@ with open(INTENTS_FILE, "r", encoding="utf-8") as f:
     intents = json.load(f)["intents"]
 
 def handle_message(message):
-    original_message = message.strip()        # запазваме как е написал потребителят
-    message_lower = original_message.lower()  # само за разпознаване
+    original_message = message.strip()       
+    message_lower = original_message.lower()  
 
     for intent in intents:
         for pattern in intent["patterns"]:
@@ -31,31 +31,29 @@ def handle_message(message):
                         "- Добави клуб Име\n"
                         "- Покажи всички\n"
                         "- Изтрий клуб Име\n"
-                        "- Изход"
+                        "- Изход\n"
                     )
 
                 # =====================
                 # EXIT
                 # =====================
                 if tag == "exit":
-                    return "Довиждане!"
+                    return "Довиждане!\n"
 
                 # =====================
                 # ADD CLUB
                 # =====================
                 if tag == "add_club":
-                    # Вземаме името на клуба от оригиналното съобщение
                     club_name = match.group(1)
-                    # Възстановяване на оригиналния капс от съобщението
                     start_idx = original_message.lower().find(club_name.lower())
                     if start_idx != -1:
                         club_name = original_message[start_idx:start_idx + len(club_name)]
 
                     success = add_club(club_name, "Unknown", 0)
                     if success:
-                        return f"Клуб '{club_name}' е добавен."
+                        return f"Клуб '{club_name}' е добавен.\n"
                     else:
-                        return "Грешка или клубът вече съществува."
+                        return "Грешка или клубът вече съществува.\n"
 
                 # =====================
                 # LIST CLUBS
@@ -63,11 +61,11 @@ def handle_message(message):
                 if tag == "list_clubs":
                     clubs = get_all_clubs()
                     if not clubs:
-                        return "Няма добавени клубове."
+                        return "Няма добавени клубове.\n"
                     response = "Списък с клубове:\n"
                     for club in clubs:
                         response += f"- {club['name']}\n"
-                    return response
+                    return response + "\n"
 
                 # =====================
                 # DELETE CLUB
@@ -81,8 +79,8 @@ def handle_message(message):
 
                     success = delete_club(club_name)
                     if success:
-                        return f"Клуб '{club_name}' е изтрит."
+                        return f"Клуб '{club_name}' е изтрит.\n"
                     else:
-                        return "Клубът не съществува."
+                        return "Клубът не съществува.\n"
 
-    return "Не разбирам командата. Напиши 'помощ'."
+    return "Не разбирам командата. Напиши 'помощ'.\n"
