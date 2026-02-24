@@ -18,7 +18,7 @@
     {
       "tag": "list_clubs",
       "patterns": [
-        "покажи всички",
+        "покажи всички клубове",
         "всички клубове",
         "list clubs"
       ]
@@ -28,6 +28,34 @@
       "patterns": [
         "изтрий клуб (.+)",
         "delete club (.+)"
+      ]
+    },
+    {
+      "tag": "add_player",
+      "patterns": [
+        "добави играч (.+) в (.+) позиция (.+) номер (\\d+)",
+        "add player (.+) to (.+) position (.+) number (\\d+)"
+      ]
+    },
+    {
+      "tag": "list_players",
+      "patterns": [
+        "покажи играчи на (.+)",
+        "list players of (.+)"
+      ]
+    },
+    {
+      "tag": "update_player_number",
+      "patterns": [
+        "смени номер на (.+) на (\\d+)",
+        "change number of (.+) to (\\d+)"
+      ]
+    },
+    {
+      "tag": "delete_player",
+      "patterns": [
+        "изтрий играч (.+)",
+        "delete player (.+)"
       ]
     }
   ]
