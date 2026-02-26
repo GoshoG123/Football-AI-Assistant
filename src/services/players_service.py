@@ -84,16 +84,17 @@ def get_all_players(club_id=None):
 # =========================
 # UPDATE
 # =========================
-def update_player(player_id, position=None, number=None, status=None):
+def update_player(player_id, full_name=None, position=None, number=None, status=None):
     """
     Редакция на играч
-    Може да се промени позиция, номер или статус
+    Може да се промени име, позиция, номер или статус
     """
-    if position and position not in VALID_POSITIONS:
+
+    if position is not None and position not in VALID_POSITIONS:
         print("Невалидна позиция. Изберете GK, DF, MF или FW.")
         return False
 
-    if number and not (1 <= number <= 99):
+    if number is not None and not (1 <= number <= 99):
         print("Невалиден номер. Трябва да е между 1 и 99.")
         return False
 
@@ -105,13 +106,19 @@ def update_player(player_id, position=None, number=None, status=None):
         updates = []
         values = []
 
-        if position:
+        if full_name is not None:
+            updates.append("full_name = ?")
+            values.append(full_name)
+
+        if position is not None:
             updates.append("position = ?")
             values.append(position)
-        if number:
+
+        if number is not None:
             updates.append("number = ?")
             values.append(number)
-        if status:
+
+        if status is not None:
             updates.append("status = ?")
             values.append(status)
 

@@ -45,10 +45,10 @@
       ]
     },
     {
-      "tag": "update_player_number",
+      "tag": "update_player",
       "patterns": [
-        "смени номер на (.+) на (\\d+)",
-        "change number of (.+) to (\\d+)"
+        "смени (име|позиция|номер|статус) на (.+) на (.+)",
+        "change (name|position|number|status) of (.+) to (.+)"
       ]
     },
     {
