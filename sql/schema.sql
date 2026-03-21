@@ -35,6 +35,7 @@ CREATE TABLE transfers (
     to_club_id INTEGER,
     transfer_date DATE,
     fee REAL,
+    note TEXT,
     FOREIGN KEY (player_id) REFERENCES players(id),
     FOREIGN KEY (from_club_id) REFERENCES clubs(id),
     FOREIGN KEY (to_club_id) REFERENCES clubs(id)

@@ -57,6 +57,31 @@
         "изтрий играч (.+)",
         "delete player (.+)"
       ]
+    },
+
+    {
+      "tag": "transfer_player",
+      "patterns": [
+        "трансфер (.+) от (.+) в (.+) (\\d{4}-\\d{2}-\\d{2})",
+        "трансфер (.+) от (.+) в (.+) (\\d{4}-\\d{2}-\\d{2}) сума (\\d+)",
+        "transfer (.+) from (.+) to (.+) (\\d{4}-\\d{2}-\\d{2})",
+        "transfer (.+) from (.+) to (.+) (\\d{4}-\\d{2}-\\d{2}) fee (\\d+)"
+      ]
+    },
+    {
+      "tag": "show_transfers_club",
+      "patterns": [
+        "покажи трансфери на клуб (.+)",
+        "show transfers of club (.+)"
+      ]
+    },
+    {
+      "tag": "show_transfers_player",
+      "patterns": [
+        "покажи трансфери на (.+)",
+        "show transfers of (.+)"
+      ]
     }
+    
   ]
 }
