@@ -5,6 +5,9 @@ from services.clubs_service import add_club, get_all_clubs, delete_club
 from services.players_service import add_player, get_all_players, update_player, delete_player
 from services.transfers_service import transfer_player, list_transfers_by_player, list_transfers_by_club
 from utils.logger import log_command  # Logger за запис на всички команди
+#from services.leagues_service import create_league, add_team_to_league, list_league_teams,remove_team_from_league, generate_schedule, get_schedule
+from handlers_leagues import handle_create_league, handle_add_team, handle_list_teams, handle_remove_team, handle_generate_schedule, handle_show_schedule
+
 
 # =========================
 # Зареждане на intents.json
@@ -12,13 +15,25 @@ from utils.logger import log_command  # Logger за запис на всички
 BASE_DIR = os.path.dirname(__file__)
 INTENTS_FILE = os.path.join(BASE_DIR, "intents.json")
 
+
+
+
 with open(INTENTS_FILE, "r", encoding="utf-8") as f:
     intents = json.load(f)["intents"]
+
+
+
+
+
+
 
 
 def handle_message(message):
     original_message = message.strip()
     message_lower = original_message.lower()
+
+
+
 
     for intent in intents:
         for pattern in intent["patterns"]:
@@ -26,6 +41,9 @@ def handle_message(message):
             if match:
                 tag = intent["tag"]
                 response = ""
+
+
+
 
                 # =====================
                 # HELP
@@ -43,14 +61,26 @@ def handle_message(message):
                         "- Трансфер Име от Клуб1 в Клуб2 YYYY-MM-DD [сума N]\n"
                         "- Покажи трансфери на Име\n"
                         "- Покажи трансфери на клуб Клуб\n"
+                        "- Създай лига Име Сезон\n"
+                        "- Добави отбор Клуб в лига Име Сезон\n"
+                        "- Покажи отбори в лига Име Сезон\n"
+                        "- Премахни отбор Клуб от лига Име Сезон\n"
+                        "- Генерирай програма Име Сезон\n"
+                        "- Покажи програма Име Сезон\n"
                         "- Изход\n"
                     )
+
+
+
 
                 # =====================
                 # EXIT
                 # =====================
                 elif tag == "exit":
                     response = "Довиждане!\n"
+
+
+
 
                 # =====================
                 # ADD CLUB
@@ -62,6 +92,9 @@ def handle_message(message):
                         club_name = original_message[start_idx:start_idx + len(club_name)]
                     success = add_club(club_name, "Unknown", 0)
                     response = f"Клуб '{club_name}' е добавен.\n" if success else "Грешка или клубът вече съществува.\n"
+
+
+
 
                 # =====================
                 # LIST CLUBS
@@ -75,6 +108,9 @@ def handle_message(message):
                         for club in clubs:
                             response += f"- {club['name']}\n"
 
+
+
+
                 # =====================
                 # DELETE CLUB
                 # =====================
@@ -85,6 +121,9 @@ def handle_message(message):
                         club_name = original_message[start_idx:start_idx + len(club_name)]
                     success = delete_club(club_name)
                     response = f"Клуб '{club_name}' е изтрит.\n" if success else "Клубът не съществува.\n"
+
+
+
 
                 # =====================
                 # ADD PLAYER
@@ -101,6 +140,9 @@ def handle_message(message):
                     position = match.group(3).upper()
                     number = int(match.group(4))
 
+
+
+
                     clubs = get_all_clubs()
                     club_id = None
                     for c in clubs:
@@ -112,6 +154,9 @@ def handle_message(message):
                     else:
                         success = add_player(full_name, "2000-01-01", "Unknown", position, number, club_id)
                         response = f"Играч '{full_name}' е добавен в '{club_name}' като {position} с номер {number}.\n" if success else "Грешка при добавяне на играча.\n"
+
+
+
 
                 # =====================
                 # LIST PLAYERS
@@ -138,6 +183,9 @@ def handle_message(message):
                             for p in players:
                                 response += f"- {p['full_name']} | {p['position']} | #{p['number']} | {p['status']}\n"
 
+
+
+
                 # =====================
                 # UPDATE PLAYER
                 # =====================
@@ -148,6 +196,9 @@ def handle_message(message):
                     start_idx = original_message.lower().find(full_name.lower())
                     if start_idx != -1:
                         full_name = original_message[start_idx:start_idx + len(full_name)]
+
+
+
 
                     players = get_all_players()
                     player_id = None
@@ -175,6 +226,9 @@ def handle_message(message):
                         else:
                             response = "Грешка при обновяване.\n"
 
+
+
+
                 # =====================
                 # TRANSFER PLAYER
                 # =====================
@@ -187,16 +241,28 @@ def handle_message(message):
                     if len(match.groups()) == 5:
                         fee = float(match.group(5))
 
+
+
+
                     def restore(text):
                         idx = original_message.lower().find(text.lower())
                         return original_message[idx:idx + len(text)] if idx != -1 else text
+
+
+
 
                     player_name = restore(player_name)
                     from_club = restore(from_club)
                     to_club = restore(to_club)
 
+
+
+
                     success, msg = transfer_player(player_name, from_club, to_club, date, fee)
                     response = msg + "\n"
+
+
+
 
                 # =====================
                 # SHOW TRANSFERS BY PLAYER
@@ -215,6 +281,9 @@ def handle_message(message):
                             fee_value = t['fee'] if t['fee'] is not None else "N/A"
                             response += f"- {t['transfer_date']} | {t['from_club']} → {t['to_club']} | {fee_value}\n"
 
+
+
+
                 # =====================
                 # SHOW TRANSFERS BY CLUB
                 # =====================
@@ -224,15 +293,52 @@ def handle_message(message):
                     if idx != -1:
                         club_name = original_message[idx:idx + len(club_name)]
 
+
+
+
                     transfers = list_transfers_by_club(club_name)
+
+
+
 
                     if not transfers:
                         return f"Няма трансфери за клуб '{club_name}'.\n"
+
+
+
 
                     response = f"Трансфери на клуб '{club_name}':\n"
                     for t in transfers:
                         fee_value = t['fee'] if t['fee'] is not None else "N/A"
                         response += f"- {t['transfer_date']} | {t['player_name']} | {t['from_club']} → {t['to_club']} | {fee_value}\n"
+
+
+
+
+                elif tag == "create_league":
+                    response = handle_create_league(match) + "\n"
+
+
+                elif tag == "add_team_to_league":
+                    response = handle_add_team(match) + "\n"
+
+
+                elif tag == "list_league_teams":
+                    response = handle_list_teams(match) + "\n"
+
+
+                elif tag == "remove_team_from_league":
+                    response = handle_remove_team(match) + "\n"
+
+
+                elif tag == "generate_schedule":
+                    response = handle_generate_schedule(match) + "\n"
+
+
+                elif tag == "show_schedule":
+                    response = handle_show_schedule(match) + "\n"
+
+
 
 
                 # =====================
@@ -255,11 +361,17 @@ def handle_message(message):
                         success = delete_player(player_id)
                         response = f"Играчът '{full_name}' е изтрит.\n" if success else "Грешка при изтриването на играча.\n"
 
+
+
+
                 # =====================
                 # НЕ РАЗБИРАМ КОМАНДАТА
                 # =====================
                 else:
                     response = "Не разбирам командата. Напиши 'помощ'.\n"
+
+
+
 
                 # =====================
                 # LOG COMMAND
@@ -271,6 +383,12 @@ def handle_message(message):
                         params[f"param{i}"] = g
                 log_command(original_message, tag, params, response.strip())
 
+
+
+
                 return response
+
+
+
 
     return "Не разбирам командата. Напиши 'помощ'.\n"

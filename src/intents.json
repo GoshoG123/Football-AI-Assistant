@@ -81,7 +81,50 @@
         "покажи трансфери на (.+)",
         "show transfers of (.+)"
       ]
-    }
+    },
+      {
+  "tag": "create_league",
+  "patterns": [
+    "създай лига (.+) (\\d{4}/\\d{4})",
+    "create league (.+) (\\d{4}/\\d{4})"
+  ]
+},
+{
+  "tag": "add_team_to_league",
+  "patterns": [
+    "добави отбор (.+) в лига (.+) (\\d{4}/\\d{4})",
+    "add team (.+) to league (.+) (\\d{4}/\\d{4})"
+  ]
+},
+{
+  "tag": "list_league_teams",
+  "patterns": [
+    "покажи отбори в лига (.+) (\\d{4}/\\d{4})",
+    "show teams in league (.+) (\\d{4}/\\d{4})"
+  ]
+},
+{
+  "tag": "remove_team_from_league",
+  "patterns": [
+    "премахни отбор (.+) от лига (.+) (\\d{4}/\\d{4})",
+    "remove team (.+) from league (.+) (\\d{4}/\\d{4})"
+  ]
+},
+{
+  "tag": "generate_schedule",
+  "patterns": [
+    "генерирай програма (.+) (\\d{4}/\\d{4})",
+    "generate schedule (.+) (\\d{4}/\\d{4})"
+  ]
+},
+{
+  "tag": "show_schedule",
+  "patterns": [
+    "покажи програма (.+) (\\d{4}/\\d{4})",
+    "show schedule (.+) (\\d{4}/\\d{4})"
+  ]
+}
+
     
   ]
 }

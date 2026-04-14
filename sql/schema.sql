@@ -47,8 +47,11 @@ CREATE TABLE transfers (
 CREATE TABLE leagues (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    season TEXT NOT NULL
+    season TEXT NOT NULL,
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(name, season)
 );
+
 
 -- =========================
 -- LEAGUE TEAMS
@@ -56,10 +59,12 @@ CREATE TABLE leagues (
 CREATE TABLE league_teams (
     league_id INTEGER,
     club_id INTEGER,
+    joined_at TEXT DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (league_id, club_id),
     FOREIGN KEY (league_id) REFERENCES leagues(id),
     FOREIGN KEY (club_id) REFERENCES clubs(id)
 );
+
 
 -- =========================
 -- MATCHES
@@ -67,15 +72,17 @@ CREATE TABLE league_teams (
 CREATE TABLE matches (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     league_id INTEGER,
+    round_no INTEGER NOT NULL,
     home_club_id INTEGER,
     away_club_id INTEGER,
     match_date DATE,
-    home_goals INTEGER DEFAULT 0,
-    away_goals INTEGER DEFAULT 0,
+    home_goals INTEGER DEFAULT NULL,
+    away_goals INTEGER DEFAULT NULL,
     FOREIGN KEY (league_id) REFERENCES leagues(id),
     FOREIGN KEY (home_club_id) REFERENCES clubs(id),
     FOREIGN KEY (away_club_id) REFERENCES clubs(id)
 );
+
 
 -- =========================
 -- GOALS
@@ -270,18 +277,18 @@ INSERT INTO leagues (name, season) VALUES
 
 
 -- LEAGUE TEAMS (10)
-INSERT INTO league_teams VALUES
+INSERT INTO league_teams (league_id, club_id) VALUES
 (1,1),(1,2),(1,3),(1,4),(1,5),
 (1,6),(1,7),(1,8),(1,9),(1,10);
 
 
 -- MATCHES (5)
-INSERT INTO matches (league_id, home_club_id, away_club_id, match_date, home_goals, away_goals) VALUES
-(1, 1, 2, '2025-09-01', 2, 1),
-(1, 3, 4, '2025-09-02', 3, 0),
-(1, 5, 6, '2025-09-03', 1, 1),
-(1, 7, 8, '2025-09-04', 0, 2),
-(1, 9, 10, '2025-09-05', 4, 2);
+INSERT INTO matches (league_id, round_no, home_club_id, away_club_id, match_date, home_goals, away_goals) VALUES
+(1, 1, 1, 2, '2025-09-01', 2, 1),
+(1, 1, 3, 4, '2025-09-02', 3, 0),
+(1, 1, 5, 6, '2025-09-03', 1, 1),
+(1, 1, 7, 8, '2025-09-04', 0, 2),
+(1, 1, 9, 10, '2025-09-05', 4, 2);
 
 
 -- GOALS
