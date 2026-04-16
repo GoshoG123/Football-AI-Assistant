@@ -67,7 +67,7 @@ CREATE TABLE league_teams (
 
 
 -- =========================
--- MATCHES
+-- MATCHES (UPDATED)
 -- =========================
 CREATE TABLE matches (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -78,36 +78,48 @@ CREATE TABLE matches (
     match_date DATE,
     home_goals INTEGER DEFAULT NULL,
     away_goals INTEGER DEFAULT NULL,
+    status TEXT DEFAULT 'scheduled',
     FOREIGN KEY (league_id) REFERENCES leagues(id),
     FOREIGN KEY (home_club_id) REFERENCES clubs(id),
     FOREIGN KEY (away_club_id) REFERENCES clubs(id)
 );
 
 
+
+
 -- =========================
--- GOALS
+-- GOALS (UPDATED)
 -- =========================
 CREATE TABLE goals (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     match_id INTEGER,
     player_id INTEGER,
+    club_id INTEGER,
     minute INTEGER,
+    is_own_goal INTEGER DEFAULT 0,
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (match_id) REFERENCES matches(id),
-    FOREIGN KEY (player_id) REFERENCES players(id)
+    FOREIGN KEY (player_id) REFERENCES players(id),
+    FOREIGN KEY (club_id) REFERENCES clubs(id)
 );
 
+
+ 
 -- =========================
--- CARDS
+-- CARDS (UPDATED)
 -- =========================
 CREATE TABLE cards (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     match_id INTEGER,
     player_id INTEGER,
-    card_type TEXT CHECK(card_type IN ('yellow','red')),
+    club_id INTEGER,
     minute INTEGER,
+    card_type TEXT CHECK(card_type IN ('Y','R')),
     FOREIGN KEY (match_id) REFERENCES matches(id),
-    FOREIGN KEY (player_id) REFERENCES players(id)
+    FOREIGN KEY (player_id) REFERENCES players(id),
+    FOREIGN KEY (club_id) REFERENCES clubs(id)
 );
+
 
 
 -- =========================
@@ -282,40 +294,46 @@ INSERT INTO league_teams (league_id, club_id) VALUES
 (1,6),(1,7),(1,8),(1,9),(1,10);
 
 
+
 -- MATCHES (5)
-INSERT INTO matches (league_id, round_no, home_club_id, away_club_id, match_date, home_goals, away_goals) VALUES
-(1, 1, 1, 2, '2025-09-01', 2, 1),
-(1, 1, 3, 4, '2025-09-02', 3, 0),
-(1, 1, 5, 6, '2025-09-03', 1, 1),
-(1, 1, 7, 8, '2025-09-04', 0, 2),
-(1, 1, 9, 10, '2025-09-05', 4, 2);
+INSERT INTO matches (league_id, round_no, home_club_id, away_club_id, match_date, home_goals, away_goals, status) VALUES
+(1, 1, 1, 2, '2025-09-01', 2, 1, 'played'),
+(1, 1, 3, 4, '2025-09-02', 3, 0, 'played'),
+(1, 1, 5, 6, '2025-09-03', 1, 1, 'played'),
+(1, 1, 7, 8, '2025-09-04', 0, 2, 'played'),
+(1, 1, 9, 10, '2025-09-05', 4, 2, 'played');
+
+
 
 
 -- GOALS
-INSERT INTO goals (match_id, player_id, minute) VALUES
-(1, 1, 23),
-(1, 12, 55),
-(1, 3, 70),
-(2, 5, 12),
-(2, 6, 48),
-(2, 13, 75),
-(3, 9, 33),
-(3, 10, 60),
-(4, 15, 22),
-(4, 15, 80),
-(5, 16, 10),
-(5, 16, 40),
-(5, 16, 65),
-(5, 17, 78);
+INSERT INTO goals (match_id, player_id, club_id, minute) VALUES
+(1, 1, 1, 23),
+(1, 12, 2, 55),
+(1, 3, 1, 70),
+(2, 5, 3, 12),
+(2, 6, 4, 48),
+(2, 13, 3, 75),
+(3, 9, 5, 33),
+(3, 10, 6, 60),
+(4, 15, 7, 22),
+(4, 15, 7, 80),
+(5, 16, 9, 10),
+(5, 16, 9, 40),
+(5, 16, 9, 65),
+(5, 17, 10, 78);
+
+
 
 
 -- CARDS
-INSERT INTO cards (match_id, player_id, card_type, minute) VALUES
-(1, 2, 'yellow', 30),
-(2, 7, 'yellow', 50),
-(3, 9, 'red', 88),
-(4, 15, 'yellow', 15),
-(5, 16, 'yellow', 44);
+INSERT INTO cards (match_id, player_id, club_id, card_type, minute) VALUES
+(1, 2, 2, 'Y', 30),
+(2, 7, 4, 'Y', 50),
+(3, 9, 5, 'R', 88),
+(4, 15, 7, 'Y', 15),
+(5, 16, 9, 'Y', 44);
+
 
 
 -- TRANSFERS
