@@ -64,21 +64,21 @@ def add_player(full_name, birth_date, nationality, position, number, club_id):
 # READ
 # =========================
 def get_all_players(club_id=None):
-    """
-    Връща списък с всички играчи
-    Ако е зададен club_id, филтрира по клуб
-    """
     conn = get_connection()
     cursor = conn.cursor()
+
 
     if club_id:
         cursor.execute("SELECT * FROM players WHERE club_id = ?", (club_id,))
     else:
         cursor.execute("SELECT * FROM players")
 
+
     players = cursor.fetchall()
     conn.close()
-    return players
+
+
+    return [dict(p) for p in players]
 
 
 # =========================
