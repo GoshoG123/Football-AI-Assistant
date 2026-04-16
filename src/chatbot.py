@@ -7,6 +7,14 @@ from services.transfers_service import transfer_player, list_transfers_by_player
 from utils.logger import log_command  # Logger за запис на всички команди
 #from services.leagues_service import create_league, add_team_to_league, list_league_teams,remove_team_from_league, generate_schedule, get_schedule
 from handlers_leagues import handle_create_league, handle_add_team, handle_list_teams, handle_remove_team, handle_generate_schedule, handle_show_schedule
+from handlers_matches import (
+    handle_show_round,
+    handle_select_match,
+    handle_goal,
+    handle_card,
+    handle_show_events,
+    handle_result
+)
 
 
 # =========================
@@ -67,6 +75,12 @@ def handle_message(message):
                         "- Премахни отбор Клуб от лига Име Сезон\n"
                         "- Генерирай програма Име Сезон\n"
                         "- Покажи програма Име Сезон\n"
+                        "- Покажи кръг N Лига Сезон\n"
+                        "- Избери мач ID\n"
+                        "- Резултат Отбор1-Отбор2 X:Y запиши\n"
+                        "- Гол Играч Отбор Минута минута\n"
+                        "- Картон Играч Отбор Y/R Минута\n"
+                        "- Покажи събития\n"
                         "- Изход\n"
                     )
 
@@ -339,6 +353,34 @@ def handle_message(message):
                     response = handle_show_schedule(match) + "\n"
 
 
+                 # =====================
+               # MATCHES
+               # =====================
+
+
+                elif tag == "show_round":
+                    response = handle_show_round(match) + "\n"
+
+
+                elif tag == "select_match":
+                    response = handle_select_match(match) + "\n"
+
+
+                elif tag == "add_goal":
+                    response = handle_goal(match) + "\n"
+
+
+                elif tag == "add_card":
+                    response = handle_card(match) + "\n"
+
+
+                elif tag == "show_events":
+                    response = handle_show_events(match) + "\n"
+
+
+                elif tag == "set_result":
+                    response = handle_result(match) + "\n" 
+
 
 
                 # =====================
@@ -378,7 +420,8 @@ def handle_message(message):
                 # =====================
                 params = {}
                 if tag in ["add_club", "delete_club", "list_players", "add_player", "update_player",
-                           "transfer_player", "show_transfers_player", "show_transfers_club", "delete_player"]:
+                           "transfer_player", "show_transfers_player", "show_transfers_club", "delete_player",
+                           "show_round", "select_match", "add_goal", "add_card", "show_events", "set_result"]:
                     for i, g in enumerate(match.groups(), 1):
                         params[f"param{i}"] = g
                 log_command(original_message, tag, params, response.strip())
