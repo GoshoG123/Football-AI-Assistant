@@ -357,3 +357,258 @@
 - Винисиус Белоти | FW | #9 | active
 - Абубакар Тунгара | FW | #10 | active
 - Дамян Йорданов | FW | #11 | active
+[2026-05-27 21:19:52] INPUT: създай лига Ефбет 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'ефбет' (2025/2026)
+[2026-05-27 21:20:00] INPUT: добави отбор Лудогорец в лига Ефбет 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'лудогорец' в лига 'ефбет'.
+[2026-05-27 21:20:07] INPUT: добави отбор Берое в лига Ефбет 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'берое' в лига 'ефбет'.
+[2026-05-27 21:20:20] INPUT: добави отбор Левски София в лига Ефбет 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'левски софия' в лига 'ефбет'.
+[2026-05-27 21:20:33] INPUT: добави отбор ЦСКА София в лига Ефбет 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'цска софия' в лига 'ефбет'.
+[2026-05-27 21:20:56] INPUT: генерирай програма Ефбет 2025/2026 | INTENT: generate_schedule | PARAMS:  | RESULT: Програмата е генерирана!
+Кръгове: 3
+Мачове: 6
+
+Първи кръг:
+- Левски София vs Берое
+- ЦСКА София vs Лудогорец
+[2026-05-27 21:20:58] INPUT: покажи програма ефбет 2025/2026 | INTENT: show_schedule | PARAMS:  | RESULT: Програма за 'ефбет' (2025/2026):
+
+Кръг 1:
+- Левски София vs Берое
+- ЦСКА София vs Лудогорец
+
+Кръг 2:
+- Левски София vs Лудогорец
+- Берое vs ЦСКА София
+
+Кръг 3:
+- Левски София vs ЦСКА София
+- Лудогорец vs Берое
+[2026-05-27 21:20:59] INPUT: покажи събития | INTENT: show_events | PARAMS:  | RESULT: Няма избран мач.
+[2026-05-27 21:21:04] INPUT: избери мач 6 | INTENT: select_match | PARAMS: param1=6 | RESULT: Избран мач #6
+[2026-05-27 21:21:06] INPUT: покажи събития | INTENT: show_events | PARAMS:  | RESULT: Събития:
+
+--------------------------------------------
+
+Мачът още няма резултат.
+[2026-05-27 21:21:17] INPUT: гол Крум Стоянов Берое 34 минута | INTENT: add_goal | PARAMS: param1=крум стоянов, param2=берое, param3=34 | RESULT: Гол на Крум Стоянов (34 мин.)
+[2026-05-27 21:21:25] INPUT: картон Крум Стоянов Берое R 45 | INTENT: add_card | PARAMS: param1=крум стоянов, param2=берое, param3=r, param4=45 | RESULT: Картон (R) за Крум Стоянов
+[2026-05-27 21:21:40] INPUT: резултат Берое-Левски София 3:1 запиши | INTENT: set_result | PARAMS: param1=берое, param2=левски софия, param3=3, param4=1 | RESULT: Резултатът е записан (3:1)
+[2026-05-27 21:21:42] INPUT: покажи събития | INTENT: show_events | PARAMS:  | RESULT: Събития:
+34' ⚽ Крум Стоянов (Берое)
+45' 🟥 Крум Стоянов (Берое)
+
+--------------------------------------------
+
+Резултат:
+Левски София 3:1 Берое
+[2026-05-27 21:22:00] INPUT: покажи класиране Ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Левски София | 1 MP | 1 W | 0 D | 0 L | 3:1 | GD 2 | 3 pts
+2. Лудогорец | 0 MP | 0 W | 0 D | 0 L | 0:0 | GD 0 | 0 pts
+3. ЦСКА София | 0 MP | 0 W | 0 D | 0 L | 0:0 | GD 0 | 0 pts
+4. Берое | 1 MP | 0 W | 0 D | 1 L | 1:3 | GD -2 | 0 pts
+[2026-05-27 21:24:17] INPUT: покажи събития | INTENT: show_events | PARAMS:  | RESULT: Няма избран мач.
+[2026-05-27 21:24:19] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Левски София | 1 MP | 1 W | 0 D | 0 L | 3:1 | GD 2 | 3 pts
+2. Лудогорец | 0 MP | 0 W | 0 D | 0 L | 0:0 | GD 0 | 0 pts
+3. ЦСКА София | 0 MP | 0 W | 0 D | 0 L | 0:0 | GD 0 | 0 pts
+4. Берое | 1 MP | 0 W | 0 D | 1 L | 1:3 | GD -2 | 0 pts
+[2026-05-27 21:24:21] INPUT: покажи събития | INTENT: show_events | PARAMS:  | RESULT: Няма избран мач.
+[2026-05-27 21:24:21] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Левски София | 1 MP | 1 W | 0 D | 0 L | 3:1 | GD 2 | 3 pts
+2. Лудогорец | 0 MP | 0 W | 0 D | 0 L | 0:0 | GD 0 | 0 pts
+3. ЦСКА София | 0 MP | 0 W | 0 D | 0 L | 0:0 | GD 0 | 0 pts
+4. Берое | 1 MP | 0 W | 0 D | 1 L | 1:3 | GD -2 | 0 pts
+[2026-05-27 21:28:24] INPUT: резултат Лудогорец-ЦСКА София 3:1 запиши | INTENT: set_result | PARAMS: param1=лудогорец, param2=цска софия, param3=3, param4=1 | RESULT: Няма избран мач.
+[2026-05-27 21:28:27] INPUT: покажи програма ефбет 2025/2026 | INTENT: show_schedule | PARAMS:  | RESULT: Програма за 'ефбет' (2025/2026):
+
+Кръг 1:
+- Левски София vs Берое
+- ЦСКА София vs Лудогорец
+
+Кръг 2:
+- Левски София vs Лудогорец
+- Берое vs ЦСКА София
+
+Кръг 3:
+- Левски София vs ЦСКА София
+- Лудогорец vs Берое
+[2026-05-27 21:28:38] INPUT: избери мач 6 | INTENT: select_match | PARAMS: param1=6 | RESULT: Избран мач #6
+[2026-05-27 21:28:41] INPUT: избери мач 7 | INTENT: select_match | PARAMS: param1=7 | RESULT: Избран мач #7
+[2026-05-27 21:28:52] INPUT: резултат Лудогорец-ЦСКА София 3:1 запиши | INTENT: set_result | PARAMS: param1=лудогорец, param2=цска софия, param3=3, param4=1 | RESULT: Резултатът е записан (3:1)
+[2026-05-27 21:29:13] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Левски София | 1 MP | 1 W | 0 D | 0 L | 3:1 | GD 2 | 3 pts
+2. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 3:1 | GD 2 | 3 pts
+3. Берое | 1 MP | 0 W | 0 D | 1 L | 1:3 | GD -2 | 0 pts
+4. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:3 | GD -2 | 0 pts
+[2026-05-27 21:31:14] INPUT: резултат запиши Левски София-Берое 5:1 запиши | INTENT: set_result | PARAMS: param1=запиши левски софия, param2=берое, param3=5, param4=1 | RESULT: Резултатът е записан (5:1)
+[2026-05-27 21:31:15] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 5:1 | GD 4 | 3 pts
+2. Левски София | 1 MP | 1 W | 0 D | 0 L | 3:1 | GD 2 | 3 pts
+3. Берое | 1 MP | 0 W | 0 D | 1 L | 1:3 | GD -2 | 0 pts
+4. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:5 | GD -4 | 0 pts
+[2026-05-27 21:31:33] INPUT: резултат Левски София-Берое 100:1 запиши | INTENT: set_result | PARAMS: param1=левски софия, param2=берое, param3=100, param4=1 | RESULT: Резултатът е записан (100:1)
+[2026-05-27 21:31:34] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 100:1 | GD 99 | 3 pts
+2. Левски София | 1 MP | 1 W | 0 D | 0 L | 3:1 | GD 2 | 3 pts
+3. Берое | 1 MP | 0 W | 0 D | 1 L | 1:3 | GD -2 | 0 pts
+4. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:100 | GD -99 | 0 pts
+[2026-05-27 21:31:59] INPUT: избери мач 6 | INTENT: select_match | PARAMS: param1=6 | RESULT: Избран мач #6
+[2026-05-27 21:32:10] INPUT: резултат Левски София-Берое 9999:3 запиши | INTENT: set_result | PARAMS: param1=левски софия, param2=берое, param3=9999, param4=3 | RESULT: Резултатът е записан (9999:3)
+[2026-05-27 21:32:11] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Левски София | 1 MP | 1 W | 0 D | 0 L | 9999:3 | GD 9996 | 3 pts
+2. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 100:1 | GD 99 | 3 pts
+3. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:100 | GD -99 | 0 pts
+4. Берое | 1 MP | 0 W | 0 D | 1 L | 3:9999 | GD -9996 | 0 pts
+[2026-05-27 21:32:29] INPUT: резултат Левски София-Берое 0:0 запиши | INTENT: set_result | PARAMS: param1=левски софия, param2=берое, param3=0, param4=0 | RESULT: Резултатът е записан (0:0)
+[2026-05-27 21:32:35] INPUT: резултат Лудогорец-Берое 0:0 запиши | INTENT: set_result | PARAMS: param1=лудогорец, param2=берое, param3=0, param4=0 | RESULT: Резултатът е записан (0:0)
+[2026-05-27 21:32:36] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 100:1 | GD 99 | 3 pts
+2. Берое | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+3. Левски София | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+4. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:100 | GD -99 | 0 pts
+[2026-05-27 21:32:49] INPUT: резултат ЦСКА София-Лудогорец 0:0 запиши | INTENT: set_result | PARAMS: param1=цска софия, param2=лудогорец, param3=0, param4=0 | RESULT: Резултатът е записан (0:0)
+[2026-05-27 21:32:51] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 100:1 | GD 99 | 3 pts
+2. Берое | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+3. Левски София | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+4. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:100 | GD -99 | 0 pts
+[2026-05-27 21:33:04] INPUT: избери мач 7 | INTENT: select_match | PARAMS: param1=7 | RESULT: Избран мач #7
+[2026-05-27 21:33:13] INPUT: резултат ЦСКА София-Лудогорец 0:0 запиши | INTENT: set_result | PARAMS: param1=цска софия, param2=лудогорец, param3=0, param4=0 | RESULT: Резултатът е записан (0:0)
+[2026-05-27 21:33:14] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Берое | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+2. Левски София | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+3. Лудогорец | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+4. ЦСКА София | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+[2026-05-27 21:33:31] INPUT: резултат Берое-Левски София 10:1 запиши | INTENT: set_result | PARAMS: param1=берое, param2=левски софия, param3=10, param4=1 | RESULT: Резултатът е записан (10:1)
+[2026-05-27 21:33:32] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 10:1 | GD 9 | 3 pts
+2. Берое | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+3. Левски София | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+4. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:10 | GD -9 | 0 pts
+[2026-05-27 21:33:45] INPUT: избери мач 7 | INTENT: select_match | PARAMS: param1=7 | RESULT: Избран мач #7
+[2026-05-27 21:34:00] INPUT: резултат ЦСКА София-Лудогорец 0:0 запиши | INTENT: set_result | PARAMS: param1=цска софия, param2=лудогорец, param3=0, param4=0 | RESULT: Резултатът е записан (0:0)
+[2026-05-27 21:34:01] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Берое | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+2. Левски София | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+3. Лудогорец | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+4. ЦСКА София | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+[2026-05-27 21:34:06] INPUT: избери мач 6 | INTENT: select_match | PARAMS: param1=6 | RESULT: Избран мач #6
+[2026-05-27 21:34:14] INPUT: резултат Берое-Левски София 100:1 запиши | INTENT: set_result | PARAMS: param1=берое, param2=левски софия, param3=100, param4=1 | RESULT: Резултатът е записан (100:1)
+[2026-05-27 21:34:15] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Левски София | 1 MP | 1 W | 0 D | 0 L | 100:1 | GD 99 | 3 pts
+2. Лудогорец | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+3. ЦСКА София | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+4. Берое | 1 MP | 0 W | 0 D | 1 L | 1:100 | GD -99 | 0 pts
+[2026-05-27 21:34:33] INPUT: избери мач 7 | INTENT: select_match | PARAMS: param1=7 | RESULT: Избран мач #7
+[2026-05-27 21:34:43] INPUT: резултат ЦСКА София-Лудогорец 50:1 запиши | INTENT: set_result | PARAMS: param1=цска софия, param2=лудогорец, param3=50, param4=1 | RESULT: Резултатът е записан (50:1)
+[2026-05-27 21:34:45] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Левски София | 1 MP | 1 W | 0 D | 0 L | 100:1 | GD 99 | 3 pts
+2. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 50:1 | GD 49 | 3 pts
+3. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:50 | GD -49 | 0 pts
+4. Берое | 1 MP | 0 W | 0 D | 1 L | 1:100 | GD -99 | 0 pts
+[2026-05-27 21:35:04] INPUT: избери мач 6 | INTENT: select_match | PARAMS: param1=6 | RESULT: Избран мач #6
+[2026-05-27 21:35:14] INPUT: резултат Левски София-Берое 300:1 запиши | INTENT: set_result | PARAMS: param1=левски софия, param2=берое, param3=300, param4=1 | RESULT: Резултатът е записан (300:1)
+[2026-05-27 21:35:16] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Левски София | 1 MP | 1 W | 0 D | 0 L | 300:1 | GD 299 | 3 pts
+2. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 50:1 | GD 49 | 3 pts
+3. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:50 | GD -49 | 0 pts
+4. Берое | 1 MP | 0 W | 0 D | 1 L | 1:300 | GD -299 | 0 pts
+[2026-05-27 21:35:27] INPUT: резултат Берое-Левски София 1:1 запиши | INTENT: set_result | PARAMS: param1=берое, param2=левски софия, param3=1, param4=1 | RESULT: Резултатът е записан (1:1)
+[2026-05-27 21:35:28] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 50:1 | GD 49 | 3 pts
+2. Берое | 1 MP | 0 W | 1 D | 0 L | 1:1 | GD 0 | 1 pts
+3. Левски София | 1 MP | 0 W | 1 D | 0 L | 1:1 | GD 0 | 1 pts
+4. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:50 | GD -49 | 0 pts
+[2026-05-27 21:35:47] INPUT: резултат Левски София-Берое 0:0 запиши | INTENT: set_result | PARAMS: param1=левски софия, param2=берое, param3=0, param4=0 | RESULT: Резултатът е записан (0:0)
+[2026-05-27 21:35:54] INPUT: избери мач 7 | INTENT: select_match | PARAMS: param1=7 | RESULT: Избран мач #7
+[2026-05-27 21:36:05] INPUT: резултат ЦСКА София-Лудогорец 0:0 запиши | INTENT: set_result | PARAMS: param1=цска софия, param2=лудогорец, param3=0, param4=0 | RESULT: Резултатът е записан (0:0)
+[2026-05-27 21:36:06] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Берое | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+2. Левски София | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+3. Лудогорец | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+4. ЦСКА София | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+[2026-05-27 21:37:24] INPUT: резултат Левски София-Берое 10:1 запиши | INTENT: set_result | PARAMS: param1=левски софия, param2=берое, param3=10, param4=1 | RESULT: Резултатът е записан (10:1)
+[2026-05-27 21:37:27] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 10:1 | GD 9 | 3 pts
+2. Берое | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+3. Левски София | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+4. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:10 | GD -9 | 0 pts
+[2026-05-27 21:37:46] INPUT: резултат ЦСКА София-Лудогорец 0:0 запиши | INTENT: set_result | PARAMS: param1=цска софия, param2=лудогорец, param3=0, param4=0 | RESULT: Резултатът е записан (0:0)
+[2026-05-27 21:37:49] INPUT: избери мач 6 | INTENT: select_match | PARAMS: param1=6 | RESULT: Избран мач #6
+[2026-05-27 21:37:56] INPUT: резултат Левски София-Берое 10:1 запиши | INTENT: set_result | PARAMS: param1=левски софия, param2=берое, param3=10, param4=1 | RESULT: Резултатът е записан (10:1)
+[2026-05-27 21:37:58] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Левски София | 1 MP | 1 W | 0 D | 0 L | 10:1 | GD 9 | 3 pts
+2. Лудогорец | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+3. ЦСКА София | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+4. Берое | 1 MP | 0 W | 0 D | 1 L | 1:10 | GD -9 | 0 pts
+[2026-05-27 21:38:08] INPUT: резултат Берое-Левски София 20:1 запиши | INTENT: set_result | PARAMS: param1=берое, param2=левски софия, param3=20, param4=1 | RESULT: Резултатът е записан (20:1)
+[2026-05-27 21:38:09] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Левски София | 1 MP | 1 W | 0 D | 0 L | 20:1 | GD 19 | 3 pts
+2. Лудогорец | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+3. ЦСКА София | 1 MP | 0 W | 1 D | 0 L | 0:0 | GD 0 | 1 pts
+4. Берое | 1 MP | 0 W | 0 D | 1 L | 1:20 | GD -19 | 0 pts
+[2026-05-27 21:38:39] INPUT: избери мач 7 | INTENT: select_match | PARAMS: param1=7 | RESULT: Избран мач #7
+[2026-05-27 21:38:53] INPUT: резултат Лудогорец-ЦСКА София 30:1 запиши | INTENT: set_result | PARAMS: param1=лудогорец, param2=цска софия, param3=30, param4=1 | RESULT: Резултатът е записан (30:1)
+[2026-05-27 21:38:54] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 30:1 | GD 29 | 3 pts
+2. Левски София | 1 MP | 1 W | 0 D | 0 L | 20:1 | GD 19 | 3 pts
+3. Берое | 1 MP | 0 W | 0 D | 1 L | 1:20 | GD -19 | 0 pts
+4. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:30 | GD -29 | 0 pts
+[2026-05-27 21:39:11] INPUT: резултат ЦСКА София-Лудогорец 40:1 запиши | INTENT: set_result | PARAMS: param1=цска софия, param2=лудогорец, param3=40, param4=1 | RESULT: Резултатът е записан (40:1)
+[2026-05-27 21:39:12] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 40:1 | GD 39 | 3 pts
+2. Левски София | 1 MP | 1 W | 0 D | 0 L | 20:1 | GD 19 | 3 pts
+3. Берое | 1 MP | 0 W | 0 D | 1 L | 1:20 | GD -19 | 0 pts
+4. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:40 | GD -39 | 0 pts
+[2026-05-27 22:09:58] INPUT: избери мач 6 | INTENT: select_match | PARAMS: param1=6 | RESULT: Избран мач #6
+[2026-05-27 22:10:07] INPUT: резултат Левски София-Берое 10:1 запиши | INTENT: set_result | PARAMS: param1=левски софия, param2=берое, param3=10, param4=1 | RESULT: Резултатът е записан (10:1)
+[2026-05-27 22:10:08] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 40:1 | GD 39 | 3 pts
+2. Левски София | 1 MP | 1 W | 0 D | 0 L | 10:1 | GD 9 | 3 pts
+3. Берое | 1 MP | 0 W | 0 D | 1 L | 1:10 | GD -9 | 0 pts
+4. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:40 | GD -39 | 0 pts
+[2026-05-27 22:10:32] INPUT: резултат Берое-Левски София 20:1 запиши | INTENT: set_result | PARAMS: param1=берое, param2=левски софия, param3=20, param4=1 | RESULT: Резултатът е записан (1:20)
+[2026-05-27 22:10:34] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 40:1 | GD 39 | 3 pts
+2. Берое | 1 MP | 1 W | 0 D | 0 L | 20:1 | GD 19 | 3 pts
+3. Левски София | 1 MP | 0 W | 0 D | 1 L | 1:20 | GD -19 | 0 pts
+4. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:40 | GD -39 | 0 pts
+[2026-05-27 22:13:23] INPUT: резултат Левски София-Берое 50:1 запиши | INTENT: set_result | PARAMS: param1=левски софия, param2=берое, param3=50, param4=1 | RESULT: Няма избран мач.
+[2026-05-27 22:13:29] INPUT: избери мач 6 | INTENT: select_match | PARAMS: param1=6 | RESULT: Избран мач #6
+[2026-05-27 22:13:37] INPUT: резултат Левски София-Берое 50:1 запиши | INTENT: set_result | PARAMS: param1=левски софия, param2=берое, param3=50, param4=1 | RESULT: Резултатът е записан (50:1)
+[2026-05-27 22:13:39] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Левски София | 1 MP | 1 W | 0 D | 0 L | 50:1 | GD 49 | 3 pts
+2. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 40:1 | GD 39 | 3 pts
+3. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:40 | GD -39 | 0 pts
+4. Берое | 1 MP | 0 W | 0 D | 1 L | 1:50 | GD -49 | 0 pts
+[2026-05-27 22:13:50] INPUT: резултат Берое-Левски София 100:1 запиши | INTENT: set_result | PARAMS: param1=берое, param2=левски софия, param3=100, param4=1 | RESULT: Резултатът е записан (1:100)
+[2026-05-27 22:13:51] INPUT: покажи класиране ефбет 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Берое | 1 MP | 1 W | 0 D | 0 L | 100:1 | GD 99 | 3 pts
+2. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 40:1 | GD 39 | 3 pts
+3. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:40 | GD -39 | 0 pts
+4. Левски София | 1 MP | 0 W | 0 D | 1 L | 1:100 | GD -99 | 0 pts

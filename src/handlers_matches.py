@@ -31,14 +31,21 @@ def handle_show_round(match):
 
 
 def handle_result(match):
-    home_team = match.group(1)
-    away_team = match.group(2)
-    home_goals = int(match.group(3))
-    away_goals = int(match.group(4))
 
-    success, msg = save_result(None, home_goals, away_goals)
+    team1 = match.group(1)
+    team2 = match.group(2)
+
+    goals1 = int(match.group(3))
+    goals2 = int(match.group(4))
+
+    success, msg = save_result(
+        team1,
+        team2,
+        goals1,
+        goals2
+    )
+
     return msg
-
 
 
 def handle_goal(match):

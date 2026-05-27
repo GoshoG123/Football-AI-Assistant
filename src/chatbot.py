@@ -15,7 +15,7 @@ from handlers_matches import (
     handle_show_events,
     handle_result
 )
-
+from handlers_standings import handle_show_standings
 
 # =========================
 # Зареждане на intents.json
@@ -377,6 +377,8 @@ def handle_message(message):
                 elif tag == "show_events":
                     response = handle_show_events(match) + "\n"
 
+                elif tag == "show_standings":
+                    response = handle_show_standings(match) + "\n"
 
                 elif tag == "set_result":
                     response = handle_result(match) + "\n" 

@@ -7,7 +7,7 @@ from repositories.matches_repo import (
     get_match_by_id
 )
 from db import get_connection
-
+from repositories.matches_repo import get_match_by_id
 
 from repositories.leagues_repo import get_league
 from services.clubs_service import get_all_clubs
@@ -66,12 +66,48 @@ def show_round(league_name, season, round_no):
 # =========================
 # SAVE RESULT
 # =========================
-def save_result(match_id, home_goals, away_goals):
+def save_result(
+    team1,
+    team2,
+    goals1,
+    goals2
+):
+
     if CURRENT_MATCH_ID is None:
         return False, "Няма избран мач."
 
-    if home_goals < 0 or away_goals < 0:
-        return False, "Невалиден резултат."
+    match = get_match_by_id(CURRENT_MATCH_ID)
+
+    if not match:
+        return False, "Няма такъв мач."
+
+    home_team = match["home_team"].lower()
+    away_team = match["away_team"].lower()
+
+    team1 = team1.lower()
+    team2 = team2.lower()
+
+    # =========================
+    # VALIDATE MATCH ORDER
+    # =========================
+    if (
+        team1 == home_team
+        and team2 == away_team
+    ):
+
+        home_goals = goals1
+        away_goals = goals2
+
+    elif (
+        team1 == away_team
+        and team2 == home_team
+    ):
+
+        home_goals = goals2
+        away_goals = goals1
+
+    else:
+        return False, "Отборите не съвпадат с избрания мач."
 
     update_match_result(
         CURRENT_MATCH_ID,
@@ -243,3 +279,34 @@ def show_events():
             response += "Мачът още няма резултат.\n"
 
     return True, response
+
+
+# =========================
+# GET MATCH BY ID
+# =========================
+def get_match_by_id(match_id):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            m.*,
+            c1.name as home_team,
+            c2.name as away_team
+
+        FROM matches m
+
+        JOIN clubs c1
+        ON m.home_club_id = c1.id
+
+        JOIN clubs c2
+        ON m.away_club_id = c2.id
+
+        WHERE m.id = ?
+    """, (match_id,))
+
+    match = cursor.fetchone()
+
+    conn.close()
+
+    return dict(match) if match else None
