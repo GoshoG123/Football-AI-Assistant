@@ -222,3 +222,16 @@ def get_matches_by_league(league_id):
 
     return [dict(row) for row in matches]
 
+
+
+
+def get_all_leagues():
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM leagues")
+
+    leagues = cursor.fetchall()
+    conn.close()
+
+    return [dict(row) for row in leagues]
