@@ -4,6 +4,8 @@ from tkinter import ttk, scrolledtext
 from chatbot import handle_message
 from services.clubs_service import get_all_clubs
 
+from repositories.leagues_repo import get_all_leagues
+
 
 class FootballDashboard:
     def __init__(self, root):
@@ -165,6 +167,22 @@ class FootballDashboard:
         for c in clubs:
             self.menu.insert(self.players_item, "end", text=c["name"], tags=("club",))
 
+
+    # =========================
+    # GET LAST LEAGUE
+    # =========================
+    def get_current_league(self):
+        leagues = get_all_leagues()
+
+        if not leagues:
+            return None
+
+        # взима последната създадена лига
+        league = leagues[-1]
+
+        return f"{league['name']} {league['season']}"
+
+
     # =========================
     # COMMAND INPUT
     # =========================
@@ -203,13 +221,23 @@ class FootballDashboard:
             response = handle_message("покажи всички клубове")
 
         elif text == "⚽ Мачове":
-            response = handle_message("покажи кръг 1 Тест 2020/2021")
+            league = self.get_current_league()
+
+            if not league:
+                response = "Няма създадена лига."
+            else:
+                response = handle_message(f"покажи кръг 1 {league}")
 
         elif text == "📅 Кръгове":
-            response = handle_message("покажи програма Тест 2020/2021")
+            league = self.get_current_league()
+
+            if not league:
+                response = "Няма създадена лига."
+            else:
+                response = handle_message(f"покажи програма {league}")
 
         elif text == "📌 Събития":
-            response = handle_message("покажи събития")
+                    response = handle_message("покажи събития")
 
         else:
             return
