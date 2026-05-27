@@ -3,7 +3,8 @@ from repositories.matches_repo import (
     update_match_result,
     insert_goal,
     insert_card,
-    get_match_events
+    get_match_events,
+    get_match_by_id
 )
 from db import get_connection
 
@@ -62,20 +63,26 @@ def show_round(league_name, season, round_no):
 
 
 
-
 # =========================
 # SAVE RESULT
 # =========================
 def save_result(match_id, home_goals, away_goals):
+    if CURRENT_MATCH_ID is None:
+        return False, "Няма избран мач."
+
     if home_goals < 0 or away_goals < 0:
         return False, "Невалиден резултат."
 
+    update_match_result(
+        CURRENT_MATCH_ID,
+        home_goals,
+        away_goals
+    )
 
-    update_match_result(match_id, home_goals, away_goals)
-
-
-    return True, f"Резултатът е записан ({home_goals}:{away_goals})"
-
+    return True, (
+        f"Резултатът е записан "
+        f"({home_goals}:{away_goals})"
+    )
 
 
 
@@ -192,15 +199,47 @@ def show_events():
 
     events = get_match_events(CURRENT_MATCH_ID)
 
-    if not events:
-        return False, "Няма събития."
-
     response = "Събития:\n"
 
-    for e in events:
-        if e["type"] == "goal":
-            response += f"{e['minute']}' ⚽ {e['player_name']} ({e['club_name']})\n"
+    # EVENTS
+    if events:
+        for e in events:
+
+            if e["type"] == "goal":
+                response += (
+                    f"{e['minute']}' ⚽ "
+                    f"{e['player_name']} "
+                    f"({e['club_name']})\n"
+                )
+
+            elif e["type"] == "Y":
+                response += (
+                    f"{e['minute']}' 🟨 "
+                    f"{e['player_name']} "
+                    f"({e['club_name']})\n"
+                )
+
+            elif e["type"] == "R":
+                response += (
+                    f"{e['minute']}' 🟥 "
+                    f"{e['player_name']} "
+                    f"({e['club_name']})\n"
+                )
+
+    # RESULT
+    match = get_match_by_id(CURRENT_MATCH_ID)
+
+    if match:
+        response += "\n--------------------------------------------\n\n"
+
+        if match["status"] == "played":
+            response += (
+                f"Резултат:\n"
+                f"{match['home_team']} "
+                f"{match['home_goals']}:{match['away_goals']} "
+                f"{match['away_team']}\n"
+            )
         else:
-            response += f"{e['minute']}' 🟥 {e['player_name']} ({e['club_name']}) [{e['card_type']}]\n"
+            response += "Мачът още няма резултат.\n"
 
     return True, response
