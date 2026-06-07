@@ -17,6 +17,8 @@ from handlers_matches import (
 )
 from handlers_standings import handle_show_standings
 
+from ai.handlers_ai import handle_prediction
+
 # =========================
 # Зареждане на intents.json
 # =========================
@@ -81,6 +83,8 @@ def handle_message(message):
                         "- Гол Играч Отбор Минута минута\n"
                         "- Картон Играч Отбор Y/R Минута\n"
                         "- Покажи събития\n"
+                        "- Покажи класиране Име Сезон\n"
+                        "- Прогноза Отбор1 срещу Отбор2\n"
                         "- Изход\n"
                     )
 
@@ -382,6 +386,9 @@ def handle_message(message):
 
                 elif tag == "set_result":
                     response = handle_result(match) + "\n" 
+
+                elif tag == "predict_match":
+                    response = handle_prediction(match) + "\n"
 
 
 

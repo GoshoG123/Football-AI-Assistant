@@ -612,3 +612,531 @@
 2. ЦСКА София | 1 MP | 1 W | 0 D | 0 L | 40:1 | GD 39 | 3 pts
 3. Лудогорец | 1 MP | 0 W | 0 D | 1 L | 1:40 | GD -39 | 0 pts
 4. Левски София | 1 MP | 0 W | 0 D | 1 L | 1:100 | GD -99 | 0 pts
+[2026-06-06 13:07:54] INPUT: прогноза Левски София срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: ❌ Грешка от модела: Един от отборите няма минимум 5 изиграни мача в лигата.
+[2026-06-06 13:14:07] INPUT: създай лига Първа лига 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'първа лига' (2025/2026)
+[2026-06-06 13:14:53] INPUT: прогноза Левски София срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: ❌ Грешка от модела: Отборите не са в една и съща лига.
+[2026-06-06 13:19:31] INPUT: създай лига Първа лига 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'първа лига' (2025/2026)
+[2026-06-06 13:19:50] INPUT: покажи отбори в лига Първа лига 2025/2026 | INTENT: list_league_teams | PARAMS:  | RESULT: Няма отбори в тази лига.
+[2026-06-06 13:21:13] INPUT: добави отбор Левски София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'левски софия' в лига 'първа лига'.
+[2026-06-06 13:21:21] INPUT: добави отбор ЦСКА София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'цска софия' в лига 'първа лига'.
+[2026-06-06 13:21:30] INPUT: добави отбор Берое в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'берое' в лига 'първа лига'.
+[2026-06-06 13:21:38] INPUT: добави отбор Лудогорец в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'лудогорец' в лига 'първа лига'.
+[2026-06-06 13:22:38] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 59.2%
+🤝 Равен: 29.8%
+✈️ ЦСКА София: 11.0%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 13:50:53] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 59.1%
+🤝 Равен: 17.7%
+✈️ Лудогорец: 23.2%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 13:51:16] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 59.1%
+🤝 Равен: 17.7%
+✈️ Лудогорец: 23.2%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 13:51:22] INPUT: прогноза Лудогорец срещу Берое | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу Берое:
+🏠 Лудогорец: 87.4%
+🤝 Равен: 8.5%
+✈️ Берое: 4.1%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 13:51:37] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 59.2%
+🤝 Равен: 29.8%
+✈️ ЦСКА София: 11.0%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 13:51:50] INPUT: Прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 14.1%
+🤝 Равен: 14.8%
+✈️ Левски София: 71.1%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 13:51:58] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 59.1%
+🤝 Равен: 17.7%
+✈️ Лудогорец: 23.2%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 13:52:05] INPUT: прогноза Лудогорец срещу Берое | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу Берое:
+🏠 Лудогорец: 87.4%
+🤝 Равен: 8.5%
+✈️ Берое: 4.1%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 13:52:16] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 14.1%
+🤝 Равен: 14.8%
+✈️ Левски София: 71.1%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 13:52:27] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 59.2%
+🤝 Равен: 29.8%
+✈️ ЦСКА София: 11.0%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 13:52:37] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 59.1%
+🤝 Равен: 17.7%
+✈️ Лудогорец: 23.2%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 13:52:42] INPUT: прогноза Лудогорец срещу Берое | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу Берое:
+🏠 Лудогорец: 87.4%
+🤝 Равен: 8.5%
+✈️ Берое: 4.1%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 14:02:31] INPUT: покажи класиране първа лига 2025/2026 | INTENT: show_standings | PARAMS:  | RESULT: КЛАСИРАНЕ
+
+1. Лудогорец | 5 MP | 4 W | 0 D | 1 L | 8:4 | GD 4 | 12 pts
+2. Берое | 5 MP | 3 W | 0 D | 2 L | 10:7 | GD 3 | 9 pts
+3. Левски София | 5 MP | 1 W | 1 D | 3 L | 7:10 | GD -3 | 4 pts
+4. ЦСКА София | 5 MP | 1 W | 1 D | 3 L | 5:9 | GD -4 | 4 pts
+[2026-06-06 14:03:38] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 14.1%
+🤝 Равен: 14.8%
+✈️ Левски София: 71.1%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 14:10:20] INPUT: прогноза Левски София срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу Лудогорец:
+🏠 Левски София: 61.1%
+🤝 Равен: 25.4%
+✈️ Лудогорец: 13.5%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 14:10:34] INPUT: прогноза Берое срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Левски София:
+🏠 Берое: 37.1%
+🤝 Равен: 18.5%
+✈️ Левски София: 44.5%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 19:07:49] INPUT: прогноза ЦСКА София срещу Левски | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 14.1%
+🤝 Равен: 14.8%
+✈️ Левски София: 71.1%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 19:26:28] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 59.2%
+🤝 Равен: 29.8%
+✈️ ЦСКА София: 11.0%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 19:27:12] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 14.1%
+🤝 Равен: 14.8%
+✈️ Левски София: 71.1%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 19:39:52] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 18.9%
+🤝 Равен: 15.1%
+✈️ ЦСКА София: 66.0%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:33:14] INPUT: създай лига Първа лига 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'първа лига' (2025/2026)
+[2026-06-06 21:33:27] INPUT: добави отбор Левски София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'левски софия' в лига 'първа лига'.
+[2026-06-06 21:33:35] INPUT: добави отбор ЦСКА София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'цска софия' в лига 'първа лига'.
+[2026-06-06 21:33:41] INPUT: добави отбор Берое в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'берое' в лига 'първа лига'.
+[2026-06-06 21:33:48] INPUT: добави отбор Лудогорец в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'лудогорец' в лига 'първа лига'.
+[2026-06-06 21:35:01] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 65.0%
+🤝 Равен: 1.4%
+✈️ ЦСКА София: 33.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:35:10] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 65.0%
+🤝 Равен: 1.4%
+✈️ Лудогорец: 33.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:35:27] INPUT: прогноза Лудогорец срещу Берое | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу Берое:
+🏠 Лудогорец: 65.0%
+🤝 Равен: 1.4%
+✈️ Берое: 33.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:35:34] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 65.0%
+🤝 Равен: 1.4%
+✈️ Лудогорец: 33.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:35:44] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 65.0%
+🤝 Равен: 1.4%
+✈️ Левски София: 33.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:35:57] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 65.0%
+🤝 Равен: 1.4%
+✈️ ЦСКА София: 33.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:36:05] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 65.0%
+🤝 Равен: 1.4%
+✈️ Лудогорец: 33.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:36:12] INPUT: прогноза Лудогорец срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу ЦСКА София:
+🏠 Лудогорец: 65.0%
+🤝 Равен: 1.4%
+✈️ ЦСКА София: 33.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:45:20] INPUT: създай лига Първа лига 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'първа лига' (2025/2026)
+[2026-06-06 21:45:36] INPUT: добави отбор Левски София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'левски софия' в лига 'първа лига'.
+[2026-06-06 21:45:43] INPUT: добави отбор ЦСКА София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'цска софия' в лига 'първа лига'.
+[2026-06-06 21:45:51] INPUT: добави отбор Берое в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'берое' в лига 'първа лига'.
+[2026-06-06 21:45:58] INPUT: добави отбор Лудогорец в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'лудогорец' в лига 'първа лига'.
+[2026-06-06 21:47:16] INPUT: прогноза Левски София срещу Берое | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу Берое:
+🏠 Левски София: 94.5%
+🤝 Равен: 3.5%
+✈️ Берое: 2.1%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:47:23] INPUT: прогноза Берое срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Левски София:
+🏠 Берое: 58.1%
+🤝 Равен: 1.6%
+✈️ Левски София: 40.3%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:47:35] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 98.5%
+🤝 Равен: 0.3%
+✈️ ЦСКА София: 1.2%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:47:42] INPUT: прогноза Лудогорец срещу Берое | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу Берое:
+🏠 Лудогорец: 94.9%
+🤝 Равен: 2.9%
+✈️ Берое: 2.1%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:47:51] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 0.9%
+🤝 Равен: 0.3%
+✈️ Лудогорец: 98.9%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:48:03] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 87.8%
+🤝 Равен: 6.8%
+✈️ Левски София: 5.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:48:10] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 98.5%
+🤝 Равен: 0.3%
+✈️ ЦСКА София: 1.2%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:48:36] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 98.5%
+🤝 Равен: 0.3%
+✈️ ЦСКА София: 1.2%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:49:07] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 87.8%
+🤝 Равен: 6.8%
+✈️ Левски София: 5.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:49:30] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 0.9%
+🤝 Равен: 0.3%
+✈️ Лудогорец: 98.9%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:50:02] INPUT: прогноза Лудогорец срещу Берое | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу Берое:
+🏠 Лудогорец: 94.9%
+🤝 Равен: 2.9%
+✈️ Берое: 2.1%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:50:35] INPUT: прогноза ЦСКА София срещу Берое | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Берое:
+🏠 ЦСКА София: 82.8%
+🤝 Равен: 13.8%
+✈️ Берое: 3.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:50:43] INPUT: прогноза Лудогорец срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу ЦСКА София:
+🏠 Лудогорец: 97.8%
+🤝 Равен: 0.8%
+✈️ ЦСКА София: 1.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:56:25] INPUT: прогноза Левски София срещу ЦСКА Софип | INTENT: predict_match | PARAMS:  | RESULT: ❌ Няма отбор, съдържащ 'цска софип'. Налични: Левски София, ЦСКА София, Лудогорец, Ботев Пловдив, Берое, Черно море, Славия, Арда, Локомотив Пловдив, Пирин Благоевград
+[2026-06-06 21:56:36] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 99.4%
+🤝 Равен: 0.2%
+✈️ ЦСКА София: 0.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:56:44] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 5.2%
+🤝 Равен: 5.4%
+✈️ Лудогорец: 89.5%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:56:55] INPUT: прогноза Левски София срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу Лудогорец:
+🏠 Левски София: 89.7%
+🤝 Равен: 1.9%
+✈️ Лудогорец: 8.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:59:21] INPUT: прогноза Лудогорец срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу Левски София:
+🏠 Лудогорец: 81.1%
+🤝 Равен: 3.3%
+✈️ Левски София: 15.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:59:33] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 38.5%
+🤝 Равен: 3.9%
+✈️ Левски София: 57.7%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:59:43] INPUT: прогноза Берое срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Левски София:
+🏠 Берое: 7.9%
+🤝 Равен: 55.8%
+✈️ Левски София: 36.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 21:59:55] INPUT: прогноза Лудогорец срещу Берое | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу Берое:
+🏠 Лудогорец: 97.5%
+🤝 Равен: 0.4%
+✈️ Берое: 2.2%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 22:00:01] INPUT: прогноза Лудогорец срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу Левски София:
+🏠 Лудогорец: 81.1%
+🤝 Равен: 3.3%
+✈️ Левски София: 15.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 22:02:57] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 22.1%
+🤝 Равен: 24.5%
+✈️ Лудогорец: 53.5%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 22:05:18] INPUT: създай лига Първа лига 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'първа лига' (2025/2026)
+[2026-06-06 22:05:27] INPUT: добави отбор Левски София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'левски софия' в лига 'първа лига'.
+[2026-06-06 22:05:52] INPUT: добави отбор ЦСКА София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'цска софия' в лига 'първа лига'.
+[2026-06-06 22:05:58] INPUT: добави отбор Берое в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'берое' в лига 'първа лига'.
+[2026-06-06 22:06:14] INPUT: добави отбор Лудогорец в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'лудогорец' в лига 'първа лига'.
+[2026-06-06 22:06:28] INPUT: покажи отбори в лига Първа лига 2025/2026 | INTENT: list_league_teams | PARAMS:  | RESULT: Отбори в лига 'първа лига' (2025/2026):
+- Левски София
+- ЦСКА София
+- Лудогорец
+- Берое
+[2026-06-06 22:07:27] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 95.7%
+🤝 Равен: 2.2%
+✈️ Левски София: 2.2%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 22:07:34] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 98.6%
+🤝 Равен: 0.5%
+✈️ ЦСКА София: 0.9%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 22:07:43] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 48.4%
+🤝 Равен: 15.9%
+✈️ Лудогорец: 35.7%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 22:07:50] INPUT: прогноза Лудорец срещу Берое | INTENT: predict_match | PARAMS:  | RESULT: ❌ Няма отбор, съдържащ 'лудорец'. Налични: Левски София, ЦСКА София, Лудогорец, Ботев Пловдив, Берое, Черно море, Славия, Арда, Локомотив Пловдив, Пирин Благоевград
+[2026-06-06 22:07:56] INPUT: прогноза Лудогорец срещу Берое | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу Берое:
+🏠 Лудогорец: 98.4%
+🤝 Равен: 1.0%
+✈️ Берое: 0.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 22:09:49] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 98.6%
+🤝 Равен: 0.5%
+✈️ ЦСКА София: 0.9%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 22:10:29] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 95.3%
+🤝 Равен: 0.9%
+✈️ ЦСКА София: 3.8%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-06 22:10:36] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 26.6%
+🤝 Равен: 22.5%
+✈️ Левски София: 50.9%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 13:33:43] INPUT: създай лига Първа лига 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'първа лига' (2025/2026)
+[2026-06-07 13:33:50] INPUT: добави отбор ЦСКА София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'цска софия' в лига 'първа лига'.
+[2026-06-07 13:33:59] INPUT: добави отбор Левски София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'левски софия' в лига 'първа лига'.
+[2026-06-07 13:34:09] INPUT: добави отбор Берое в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'берое' в лига 'първа лига'.
+[2026-06-07 13:34:19] INPUT: добави отбор Лудогорец в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'лудогорец' в лига 'първа лига'.
+[2026-06-07 13:38:28] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 49.4%
+🤝 Равен: 7.9%
+✈️ Левски София: 42.7%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 13:38:37] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 5.2%
+🤝 Равен: 5.4%
+✈️ Лудогорец: 89.5%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 13:38:45] INPUT: прогноза Лудогорец срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу Левски София:
+🏠 Лудогорец: 99.3%
+🤝 Равен: 0.4%
+✈️ Левски София: 0.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 13:38:56] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 99.4%
+🤝 Равен: 0.2%
+✈️ ЦСКА София: 0.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 13:39:02] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 5.2%
+🤝 Равен: 5.4%
+✈️ Лудогорец: 89.5%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 13:39:10] INPUT: прогноза Лудогорец срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу ЦСКА София:
+🏠 Лудогорец: 99.4%
+🤝 Равен: 0.3%
+✈️ ЦСКА София: 0.3%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 13:39:38] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 49.4%
+🤝 Равен: 7.9%
+✈️ Левски София: 42.7%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 13:39:46] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 99.4%
+🤝 Равен: 0.2%
+✈️ ЦСКА София: 0.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 13:50:36] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 99.4%
+🤝 Равен: 0.2%
+✈️ ЦСКА София: 0.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 14:03:52] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 99.4%
+🤝 Равен: 0.2%
+✈️ ЦСКА София: 0.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 14:04:48] INPUT: създай лига Първа лига 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'първа лига' (2025/2026)
+[2026-06-07 14:04:55] INPUT: добави отбор Берое в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'берое' в лига 'първа лига'.
+[2026-06-07 14:05:03] INPUT: добави отбор Лудогорец в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'лудогорец' в лига 'първа лига'.
+[2026-06-07 14:05:11] INPUT: добави отбор ЦСКА София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'цска софия' в лига 'първа лига'.
+[2026-06-07 14:05:19] INPUT: добави отбор Левски София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'левски софия' в лига 'първа лига'.
+[2026-06-07 14:05:30] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 99.4%
+🤝 Равен: 0.2%
+✈️ ЦСКА София: 0.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 14:09:35] INPUT: създай лига Първа лига 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'първа лига' (2025/2026)
+[2026-06-07 14:09:42] INPUT: добави отбор ЦСКА София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'цска софия' в лига 'първа лига'.
+[2026-06-07 14:09:49] INPUT: добави отбор Левски София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'левски софия' в лига 'първа лига'.
+[2026-06-07 14:09:56] INPUT: добави отбор Берое в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'берое' в лига 'първа лига'.
+[2026-06-07 14:10:11] INPUT: добави отбор Лудогорец в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'лудогорец' в лига 'първа лига'.
+[2026-06-07 14:10:21] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 99.4%
+🤝 Равен: 0.2%
+✈️ ЦСКА София: 0.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 14:50:06] INPUT: създай лига Първа лига 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'първа лига' (2025/2026)
+[2026-06-07 14:50:12] INPUT: добави отбор Берое в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'берое' в лига 'първа лига'.
+[2026-06-07 14:50:19] INPUT: добави отбор Лудогорец в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'лудогорец' в лига 'първа лига'.
+[2026-06-07 14:50:27] INPUT: добави отбор Левски София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'левски софия' в лига 'първа лига'.
+[2026-06-07 14:50:34] INPUT: добави отбор ЦСКА София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'цска софия' в лига 'първа лига'.
+[2026-06-07 14:51:26] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 99.5%
+🤝 Равен: 0.1%
+✈️ ЦСКА София: 0.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 14:57:12] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 99.5%
+🤝 Равен: 0.1%
+✈️ ЦСКА София: 0.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:00:51] INPUT: създай лига Първа лига 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'първа лига' (2025/2026)
+[2026-06-07 15:00:59] INPUT: добави отбор Левски София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'левски софия' в лига 'първа лига'.
+[2026-06-07 15:01:05] INPUT: добави отбор ЦСКА София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'цска софия' в лига 'първа лига'.
+[2026-06-07 15:06:35] INPUT: създай лига Първа лига 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'първа лига' (2025/2026)
+[2026-06-07 15:06:45] INPUT: добави отбор Левски София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'левски софия' в лига 'първа лига'.
+[2026-06-07 15:06:51] INPUT: добави отбор ЦСКА София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'цска софия' в лига 'първа лига'.
+[2026-06-07 15:07:21] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 97.4%
+🤝 Равен: 1.3%
+✈️ ЦСКА София: 1.3%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:07:30] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 92.3%
+🤝 Равен: 3.9%
+✈️ Левски София: 3.8%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:09:04] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 97.4%
+🤝 Равен: 1.3%
+✈️ ЦСКА София: 1.3%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:10:07] INPUT: създай лига Първа лига 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'първа лига' (2025/2026)
+[2026-06-07 15:10:14] INPUT: добави отбор Левски София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'левски софия' в лига 'първа лига'.
+[2026-06-07 15:10:24] INPUT: добави отбор Берое в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'берое' в лига 'първа лига'.
+[2026-06-07 15:10:33] INPUT: добави отбор Лудогорец в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'лудогорец' в лига 'първа лига'.
+[2026-06-07 15:10:45] INPUT: добави отбор ЦСКА София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'цска софия' в лига 'първа лига'.
+[2026-06-07 15:11:17] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 68.8%
+🤝 Равен: 15.9%
+✈️ ЦСКА София: 15.3%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:11:30] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 49.0%
+🤝 Равен: 35.1%
+✈️ Лудогорец: 15.9%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:11:39] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 67.4%
+🤝 Равен: 16.7%
+✈️ Левски София: 15.9%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:11:58] INPUT: прогноза Лудогорец срещу Берое | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу Берое:
+🏠 Лудогорец: 62.2%
+🤝 Равен: 16.4%
+✈️ Берое: 21.4%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:12:04] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 49.0%
+🤝 Равен: 35.1%
+✈️ Лудогорец: 15.9%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:12:15] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 67.4%
+🤝 Равен: 16.7%
+✈️ Левски София: 15.9%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:12:25] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 49.0%
+🤝 Равен: 35.1%
+✈️ Лудогорец: 15.9%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:30:45] INPUT: създай лига Първа лига 2025/2026 | INTENT: create_league | PARAMS:  | RESULT: Създадена лига 'първа лига' (2025/2026)
+[2026-06-07 15:30:51] INPUT: добави отбор Берое в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'берое' в лига 'първа лига'.
+[2026-06-07 15:31:04] INPUT: добави отбор Лудогорец в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'лудогорец' в лига 'първа лига'.
+[2026-06-07 15:31:14] INPUT: добави отбор ЦСКА София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'цска софия' в лига 'първа лига'.
+[2026-06-07 15:31:21] INPUT: добави отбор Левски София в лига Първа лига 2025/2026 | INTENT: add_team_to_league | PARAMS:  | RESULT: Добавен 'левски софия' в лига 'първа лига'.
+[2026-06-07 15:31:52] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 59.0%
+🤝 Равен: 15.5%
+✈️ ЦСКА София: 25.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:31:58] INPUT: прогноза Берое срещу Лудогоре | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 31.9%
+🤝 Равен: 12.1%
+✈️ Лудогорец: 56.0%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:32:04] INPUT: прогноза Лудогорец срещу Берое | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Лудогорец срещу Берое:
+🏠 Лудогорец: 55.5%
+🤝 Равен: 19.3%
+✈️ Берое: 25.2%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:32:11] INPUT: прогноза ЦСКА София срещу Левски София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача ЦСКА София срещу Левски София:
+🏠 ЦСКА София: 29.2%
+🤝 Равен: 31.2%
+✈️ Левски София: 39.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:44:20] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 31.9%
+🤝 Равен: 12.1%
+✈️ Лудогорец: 56.0%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:46:09] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 31.9%
+🤝 Равен: 12.1%
+✈️ Лудогорец: 56.0%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:46:43] INPUT: прогноза Левски София срещу ЦСКА София | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Левски София срещу ЦСКА София:
+🏠 Левски София: 59.0%
+🤝 Равен: 15.5%
+✈️ ЦСКА София: 25.6%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:48:47] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 31.9%
+🤝 Равен: 12.1%
+✈️ Лудогорец: 56.0%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:51:03] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 31.9%
+🤝 Равен: 12.1%
+✈️ Лудогорец: 56.0%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:53:26] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 31.9%
+🤝 Равен: 12.1%
+✈️ Лудогорец: 56.0%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
+[2026-06-07 15:55:19] INPUT: прогноза Берое срещу Лудогорец | INTENT: predict_match | PARAMS:  | RESULT: 📊 Прогноза за мача Берое срещу Лудогорец:
+🏠 Берое: 31.9%
+🤝 Равен: 12.1%
+✈️ Лудогорец: 56.0%
+📈 Графиката е запазена в d:\Georgi\Code Wars 2025 2\Football-AI-Assistant\src\ai\tools\prediction_chart.png
