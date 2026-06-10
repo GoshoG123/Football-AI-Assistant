@@ -126,6 +126,10 @@ def save_result(
 # ADD GOAL
 # =========================
 def add_goal(player_name, club_name, minute):
+    from services.players_service import get_all_players
+    from services.clubs_service import get_all_clubs
+    from db import get_connection
+
     if CURRENT_MATCH_ID is None:
         return False, "Няма избран мач."
 
@@ -149,27 +153,53 @@ def add_goal(player_name, club_name, minute):
     if not club:
         return False, "Няма такъв отбор."
 
-    from repositories.matches_repo import get_matches_by_round
+    # ЕДНА връзка за всички операции
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM matches WHERE id = ?", (CURRENT_MATCH_ID,))
-    match = cursor.fetchone()
-    conn.close()
 
-    if not match:
-        return False, "Мачът не съществува."
+    try:
+        # Вземаме мача
+        cursor.execute("SELECT * FROM matches WHERE id = ?", (CURRENT_MATCH_ID,))
+        match = cursor.fetchone()
+        if not match:
+            return False, "Мачът не съществува."
 
-    if club["id"] not in [match["home_club_id"], match["away_club_id"]]:
-        return False, "Отборът не участва в този мач."
+        if club["id"] not in (match["home_club_id"], match["away_club_id"]):
+            return False, "Отборът не участва в този мач."
 
-    if player["club_id"] != club["id"]:
-        return False, "Играчът не е от този отбор."
+        if player["club_id"] != club["id"]:
+            return False, "Играчът не е от този отбор."
 
-    insert_goal(CURRENT_MATCH_ID, player["id"], club["id"], minute)
+        # Текущи голове (NULL = 0)
+        home_goals = match["home_goals"] if match["home_goals"] is not None else 0
+        away_goals = match["away_goals"] if match["away_goals"] is not None else 0
 
-    return True, f"Гол на {player_name} ({minute} мин.)"
+        if club["id"] == match["home_club_id"]:
+            home_goals += 1
+        else:
+            away_goals += 1
 
+        # Обновяваме резултата на мача
+        cursor.execute("""
+            UPDATE matches
+            SET home_goals = ?, away_goals = ?, status = 'played'
+            WHERE id = ?
+        """, (home_goals, away_goals, CURRENT_MATCH_ID))
 
+        # Вмъкваме гола (директно, без отделна функция)
+        cursor.execute("""
+            INSERT INTO goals (match_id, player_id, club_id, minute)
+            VALUES (?, ?, ?, ?)
+        """, (CURRENT_MATCH_ID, player["id"], club["id"], minute))
+
+        conn.commit()
+        return True, f"Гол на {player_name} ({minute} мин.) – резултатът е {home_goals}:{away_goals}"
+
+    except Exception as e:
+        conn.rollback()
+        return False, f"Грешка при добавяне на гол: {str(e)}"
+    finally:
+        conn.close()
 
 
 # =========================
